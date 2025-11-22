@@ -9,13 +9,54 @@ header img {
     height: 50px;
 }
 
+main {
+    display: flex;
+    
+}
+
 .main_logo {
     width: auto;
     height: 300px;
     object-fit: cover;
 }
 
+.company_logo {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
 .menu_section {
     display: flex;
     flex-direction: column;
+    width: calc(100vw - 300px);
+
+}
+
+.restaurant_info {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.restaurant_info p {
+    color: orangered;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    background-color: lightgray;
+}
+
+.menu_button {
+    border: none;
+    background-color: green;
+    padding: 8px;
+    border-radius: 5px;
+
+}
+
+.cart_section {
+    width: 300px;
+    background-color: lightseagreen;
 }
