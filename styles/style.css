@@ -1,0 +1,21 @@
+header {
+    background-color: rgba(238, 118, 13, 0.894);
+    height: 80px;
+}
+
+header img {
+    margin-top: 8px;
+    width: auto;
+    height: 50px;
+}
+
+.main_logo {
+    width: auto;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu_section {
+    display: flex;
+    flex-direction: column;
+}
