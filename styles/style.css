@@ -49,6 +49,7 @@ main {
 .restaurant_info {
     margin-top: 8px;
     margin-bottom: 8px;
+    padding-left: 16px;
 }
 
 .restaurant_info p {
@@ -73,6 +74,21 @@ main {
 .cart_section {
     width: 300px;
     background-color: lightseagreen;
+}
+
+.add_to_cart {
+    height: 30px;
+    width: 30px;
+    font-size: 25px;
+    background-color: unset;
+    border: none;
+}
+
+.dish_menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    padding-left: 16px;
 }
 
 footer {
