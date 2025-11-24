@@ -77,8 +77,8 @@ main {
 }
 
 .add_to_cart {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 40px;
     font-size: 25px;
     background-color: unset;
     border: none;
@@ -89,6 +89,8 @@ main {
     justify-content: space-between;
     background-color: aqua;
     padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 footer {
