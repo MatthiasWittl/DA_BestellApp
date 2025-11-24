@@ -13,11 +13,11 @@
     <script src="scripts/template.js"></script>
 </head>
 
-<body>
+<body onload="renderDishes()">
     <header>
         <img src="assets/logo/Bestell App- Logo.svg" alt="header_logo">
     </header>
-    <main>
+    <main  >
         <section class="menu_section">
             <div class="company_logo_div">
                 <img class="main_logo" src="assets/Images/MainLogo.jpg" alt="Main-Logo">
@@ -29,21 +29,13 @@
                 <p>Bewertungen (4,5 von 5 Sternen)</p>
             </div>
             <section class="menu">
-                <button class="menu_button" type="button">Vorspeise</button>
+                <button class="menu_button" onclick="renderDishes()" type="button">Vorspeise</button>
                 <button class="menu_button" type="button">Hauptgericht</button>
                 <button class="menu_button" type="button">Nachspeise</button>
             </section>
             <img src="" alt="actual_menu_image">
-            <section>
-                <div class="dish_menu" >
-                    <div>
-                        <h2>Name</h2>
-                        <p>Beschreibung</p>
-                        <span>Preis</span>
-                    </div>
-                    
-                    <button class="add_to_cart" type="button">&#0043</button>
-                </div>
+            <section id="all_dishes" class="dishes_container">
+            
             </section>
         </section>
         <section class="cart_section">

@@ -1,30 +1,30 @@
 let Menu = {
     appetizer: [
-    {   "id": 1,
+    {   "id": 0,
         "name": "Bruschetta",
         "description": "geröstetes Brot mit Tomaten, Basilikum, Knoblauch und Olivenöl",
         "price": 5.50
         },
     {
-        "id": 2,
+        "id": 1,
         "name": "Caprese",
         "description": "Tomaten-Mozzarella-Salat mit Basilikum",
         "price": 6.00
         },
     {
-        "id": 3,
+        "id": 2,
         "name": "Antipasti-Platte",
         "description": "Auswahl an italienischen Vorspeisen",
         "price": 8.50
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Carpaccio",
         "description": "dünn geschnittenes Rindfleisch mit Parmesan und Rucola",
         "price": 4.50
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "Bavarese alla Spuma",
         "description": "frisches Weißbier mit einer leichten Schaumkrone und zarten Weißwürstchen",
         "price": 7.00
