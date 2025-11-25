@@ -71,6 +71,14 @@ main {
 
 }
 
+.actual_menu_image {
+    width: auto;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 8px;;
+
+}
+
 .cart_section {
     width: 300px;
     background-color: lightseagreen;
@@ -95,7 +103,7 @@ main {
 
 .dish_menu:hover {
     background-color:cadetblue;
-    border: 1px solid black;
+    border: 0.5px solid black;
 }
 
 .dishes_container {
