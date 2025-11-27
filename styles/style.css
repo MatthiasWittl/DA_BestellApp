@@ -82,6 +82,17 @@ main {
 .cart_section {
     width: 300px;
     background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cart_dishes {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 2px solid black;
 }
 
 .add_to_cart {

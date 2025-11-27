@@ -63,7 +63,7 @@ let Menu = {
         },
         {
             "id": 35,
-            "name": "Hawaiian",
+            "name": "Hawai",
             "description": "Tomatensauce, Mozzarella, Schinken, Ananas",
             "price": 9.50
         }
@@ -107,4 +107,9 @@ let Menu = {
         }
 
     ]
-}
+};
+
+let cart = {
+    item: []
+
+};

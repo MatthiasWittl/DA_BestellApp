@@ -6,6 +6,21 @@ function addDishes(index, menu) {
                         <p>${Menu[menu][index].description}</p>
                         <span>${Menu[menu][index].price}€</span>
                     </div>
-                    <button class="add_to_cart" type="button">&#0043</button>
+                    <button class="add_to_cart" onclick="addToCart(${[index]}, '${menu}')" type="button">&#0043</button>
                 </div>`
+}
+
+function renderCart(index) {
+     return `
+        <div class="cart_dishes">
+        <div>
+        <h3>${cart.item[index].name}</h3>
+        <button>&#8722</button>
+        <span>${cart.item[index].piece}</span>
+        <button>&#43</button>
+        </div>
+        <span>${cart.item[index].price}</span>
+    </div>
+        `
+    
 }
