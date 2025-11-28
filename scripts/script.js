@@ -21,11 +21,10 @@ function addToCart(index, menu) {
 
 /* if abfrage wenn schon vorhanden nur piece und preis aktualisieren ansonsten neu */
 function createCartObject(index, menu) {
-    cart.item.push({"name": Menu[menu][index].name,
-                "price": Menu[menu][index].price, 
-                "piece": 1})
-
-      
+    cart.item.push({"name": Menu[menu][index].name, 
+                "piece": 1,
+                "menuPrice": Menu[menu][index].price,
+                "price": Menu[menu][index].price})    
 }
 
 function createCart() {
@@ -38,10 +37,12 @@ function createCart() {
 function countPieces(count, index) {
         if (count == "up") {
             cart.item[index].piece += 1;
+            calculateCartItemPrice(index);
             createCart();
           
         } else if (count == "down" && cart.item[index].piece > 1){
             cart.item[index].piece -= 1;
+            calculateCartItemPrice(index);
             createCart();
         } else {
             cart.item.splice(index, 1)
@@ -50,4 +51,8 @@ function countPieces(count, index) {
         }
    
 
+}
+
+function calculateCartItemPrice (index) {
+    cart.item[index].price = cart.item[index].piece * cart.item[index].menuPrice;
 }
