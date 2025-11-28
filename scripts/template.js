@@ -15,9 +15,9 @@ function renderCart(index) {
         <div class="cart_dishes">
         <div>
         <h3>${cart.item[index].name}</h3>
-        <button class="cart_button" >&#8722</button>
+        <button class="cart_button" onclick="countPieces('down', ${[index]})" >&#8722</button>
         <span>${cart.item[index].piece}</span>
-        <button class="cart_button" >&#43</button>
+        <button class="cart_button" onclick="countPieces('up', ${[index]})" >&#43</button>
         </div>
         <span>${cart.item[index].price}€</span>
     </div>

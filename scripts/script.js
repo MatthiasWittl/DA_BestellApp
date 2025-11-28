@@ -34,3 +34,20 @@ function createCart() {
         document.getElementById("cart").innerHTML += renderCart(index);
     }
 }
+
+function countPieces(count, index) {
+        if (count == "up") {
+            cart.item[index].piece += 1;
+            createCart();
+          
+        } else if (count == "down" && cart.item[index].piece > 1){
+            cart.item[index].piece -= 1;
+            createCart();
+        } else {
+            cart.item.splice(index, 1)
+            createCart();
+            
+        }
+   
+
+}
