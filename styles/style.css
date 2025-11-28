@@ -95,6 +95,13 @@ main {
     border: 2px solid black;
 }
 
+.cart_button {
+        border: none;
+        width: 20px;
+        height: auto;
+        background-color: transparent;
+}
+
 .add_to_cart {
     height: 35px;
     width: 40px;

@@ -13,17 +13,13 @@ function renderDishes(menu) {
 
 function addToCart(index, menu) {
     createCartObject(index, menu);
-    /*renderCart();*/
-    console.log(cart);
-    console.log(Menu);
-    
     createCart();
     
     
 
 }
 
-
+/* if abfrage wenn schon vorhanden nur piece und preis aktualisieren ansonsten neu */
 function createCartObject(index, menu) {
     cart.item.push({"name": Menu[menu][index].name,
                 "price": Menu[menu][index].price, 

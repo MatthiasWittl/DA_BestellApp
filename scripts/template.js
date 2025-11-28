@@ -15,11 +15,11 @@ function renderCart(index) {
         <div class="cart_dishes">
         <div>
         <h3>${cart.item[index].name}</h3>
-        <button>&#8722</button>
+        <button class="cart_button" >&#8722</button>
         <span>${cart.item[index].piece}</span>
-        <button>&#43</button>
+        <button class="cart_button" >&#43</button>
         </div>
-        <span>${cart.item[index].price}</span>
+        <span>${cart.item[index].price}€</span>
     </div>
         `
     
