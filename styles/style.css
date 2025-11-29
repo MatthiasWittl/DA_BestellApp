@@ -79,12 +79,18 @@ main {
 
 }
 
-.cart_section {
+.cart_container {
     width: 300px;
     background-color: lightseagreen;
+   
+}
+
+.cart_items {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    position: sticky;
+    top: 8px;
 }
 
 .cart_dishes {
