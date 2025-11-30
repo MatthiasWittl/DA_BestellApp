@@ -13,7 +13,7 @@
     <script src="scripts/template.js"></script>
 </head>
 
-<body onload="renderDishes('mainCourse')">
+<body onload="createDishesList('mainCourse')">
     <header>
         <img src="assets/logo/Bestell App- Logo.svg" alt="header_logo">
     </header>
@@ -29,9 +29,9 @@
                 <p>Bewertungen (4,5 von 5 Sternen)</p>
             </div>
             <section class="menu">
-                <button class="menu_button" onclick="renderDishes('appetizer')" type="button">Vorspeise</button>
-                <button class="menu_button" onclick="renderDishes('mainCourse')" type="button">Hauptgericht</button>
-                <button class="menu_button" onclick="renderDishes('dessert')" type="button">Nachspeise</button>
+                <button class="menu_button" onclick="createDishesList('appetizer')" type="button">Vorspeise</button>
+                <button class="menu_button" onclick="createDishesList('mainCourse')" type="button">Hauptgericht</button>
+                <button class="menu_button" onclick="createDishesList('dessert')" type="button">Nachspeise</button>
             </section>
             <img class="actual_menu_image" id="actual_menu_image_change" src="" alt="actual_menu_image">
             <section id="all_dishes" class="dishes_container">

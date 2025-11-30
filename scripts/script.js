@@ -1,4 +1,4 @@
-function renderDishes(menu) {
+function createDishesList(menu) {
   document.getElementById("all_dishes").innerHTML = "";
   document.getElementById("actual_menu_image_change").src =
     "assets/Images/" + [menu] + ".jpg";
