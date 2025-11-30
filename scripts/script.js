@@ -12,12 +12,14 @@ function renderDishes(menu) {
 };
 
 function addToCart(index, menu) {
-    createCartObject(index, menu);
-    createCart();
-    
-    
-
-}
+    if (cart.item.some(item => item.name == Menu[menu][index].name)) {
+        let itemIndex = cart.item.findIndex(element => element.name == Menu[menu][index].name);
+        countPieces("up", itemIndex)
+    } else {
+        createCartObject(index, menu);
+        createCart();
+    }
+    }
 
 /* if abfrage wenn schon vorhanden nur piece und preis aktualisieren ansonsten neu */
 function createCartObject(index, menu) {
