@@ -101,3 +101,6 @@ let Menu = {
 let cart = {
   item: [],
 };
+
+
+let cartTotalcost = 0;

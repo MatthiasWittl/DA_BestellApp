@@ -32,6 +32,7 @@ function createCart() {
   for (let index = 0; index < cart.item.length; index++) {
     document.getElementById("cart").innerHTML += renderCart(index);
   }
+  calculateCartCost();
 }
 
 function countPieces(count, index) {
@@ -51,4 +52,13 @@ function countPieces(count, index) {
 
 function calculateCartItemPrice(index) {
   cart.item[index].price = cart.item[index].piece * cart.item[index].menuPrice;
+}
+
+function calculateCartCost(){
+    cartTotalcost = 0;
+    for (let index = 0; index < cart.item.length; index++) {
+        cartTotalcost += cart.item[index].price
+    }
+    console.log(cartTotalcost);
+    
 }

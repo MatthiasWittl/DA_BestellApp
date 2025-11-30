@@ -82,6 +82,9 @@ main {
 .cart_container {
     width: 300px;
     background-color: lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
    
 }
 
@@ -114,6 +117,18 @@ main {
     font-size: 25px;
     background-color: unset;
     border: none;
+}
+
+.cart_payment {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    bottom: 8px;
+}
+
+.cart_payment div {
+    display: flex;
+    justify-content: space-between;
 }
 
 .dish_menu {
