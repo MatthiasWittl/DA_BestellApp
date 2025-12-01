@@ -33,6 +33,7 @@ function createCart() {
     document.getElementById("cart").innerHTML += renderCart(index);
   }
   calculateCartCost();
+  calculateDeliveryCost()
 }
 
 function countPieces(count, index) {
@@ -55,10 +56,18 @@ function calculateCartItemPrice(index) {
 }
 
 function calculateCartCost(){
-    cartTotalcost = 0;
+    cartItemCost = 0;
     for (let index = 0; index < cart.item.length; index++) {
-        cartTotalcost += cart.item[index].price
+        cartItemCost += cart.item[index].price
     }
-    console.log(cartTotalcost);
+    console.log(cartItemCost);
     
+}
+
+function calculateDeliveryCost() {
+    if (cartItemCost > 30) {
+        console.log("Lieferkosten frei");  
+    } else { 
+        console.log("+ Lieferkosten");
+    }
 }

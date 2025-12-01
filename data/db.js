@@ -103,4 +103,8 @@ let cart = {
 };
 
 
-let cartTotalcost = 0;
+let cartItemCost = 0;
+
+let deliveryFee = 8;
+
+let cartTotalCost = 0;
