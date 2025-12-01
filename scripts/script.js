@@ -33,7 +33,8 @@ function createCart() {
     document.getElementById("cart").innerHTML += renderCart(index);
   }
   calculateCartCost();
-  calculateDeliveryCost()
+  calculateDeliveryCost();
+  calculateTotalCostCart();
 }
 
 function countPieces(count, index) {
@@ -65,9 +66,24 @@ function calculateCartCost(){
 }
 
 function calculateDeliveryCost() {
-    if (cartItemCost > 30) {
+    if (cartItemCost > freeDelivery) {
         console.log("Lieferkosten frei");  
     } else { 
-        console.log("+ Lieferkosten");
+        let differenceToFreeDelivery = freeDelivery - cartItemCost;
+        console.log(differenceToFreeDelivery+"€ fehlen für Lieferkostenfrei");
     }
+}
+
+function calculateTotalCostCart() {
+        cartTotalCost = 0;
+    if (cartItemCost < freeDelivery) {
+        cartTotalCost = cartItemCost + deliveryFee
+        console.log("Gesamt kosten " + cartTotalCost + "€");
+    } else { 
+        cartTotalCost = cartItemCost
+        console.log("Gesamt kosten " + cartTotalCost + "€");
+        
+        
+    }
+    
 }

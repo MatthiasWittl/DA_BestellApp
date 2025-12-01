@@ -105,6 +105,8 @@ let cart = {
 
 let cartItemCost = 0;
 
-let deliveryFee = 8;
+let deliveryFee = 8; /* Lieferkosten */
 
 let cartTotalCost = 0;
+
+let freeDelivery = 30; /* Ab 30€ keine Lieferkosten */
