@@ -32,9 +32,7 @@ function createCart() {
   for (let index = 0; index < cart.item.length; index++) {
     document.getElementById("cart").innerHTML += renderCart(index);
   }
-  calculateCartCost();
-  calculateDeliveryCost();
-  calculateTotalCostCart();
+  createCartPrice();
 }
 
 function countPieces(count, index) {
@@ -54,6 +52,13 @@ function countPieces(count, index) {
 
 function calculateCartItemPrice(index) {
   cart.item[index].price = cart.item[index].piece * cart.item[index].menuPrice;
+}
+
+function createCartPrice(){
+    calculateCartCost();
+    calculateDeliveryCost();
+    calculateTotalCostCart();
+    document.getElementById("cart_payment_container").innerHTML = renderCartCost();
 }
 
 function calculateCartCost(){

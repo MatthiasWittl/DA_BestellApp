@@ -37,5 +37,7 @@ function renderCartCost() {
                 <div>
                     <p>Gesamt</p>
                     <p>${cartTotalCost}</p>
-        </div>`
+        </div>
+        <button type="button">Bezahlen</button>
+        `
 }
