@@ -72,10 +72,11 @@ function calculateCartCost(){
 
 function calculateDeliveryCost() {
     if (cartItemCost > freeDelivery) {
-        console.log("Lieferkosten frei");  
+        deliveryFee = 0;  /* keine harten Zahlen */
     } else { 
         let differenceToFreeDelivery = freeDelivery - cartItemCost;
         console.log(differenceToFreeDelivery+"€ fehlen für Lieferkostenfrei");
+        deliveryFee = 8; /* keine harten Zahlen */
     }
 }
 

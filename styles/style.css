@@ -104,11 +104,22 @@ main {
     border: 2px solid black;
 }
 
-.cart_button {
+.cart_add_remove_pieces {
         border: none;
         width: 20px;
         height: auto;
         background-color: transparent;
+}
+
+.cart_order_button {
+    border-radius: 5px;
+    margin-top: 8px;
+    padding: 5px;
+}
+
+.cart_border_bottom {
+    border-bottom: 2px solid rgb(151, 151, 252);
+    margin-bottom: 8px;
 }
 
 .add_to_cart {
