@@ -23,3 +23,19 @@ function renderCart(index) {
     </div>
         `;
 }
+
+function renderCartCost() {
+    return `
+       <div>
+                    <p>Zwischensumme</p>
+                    <p>${cartItemCost}</p>
+                </div>
+                <div>
+                    <p>Lieferkosten</p>
+                    <p>${deliveryFee}</p>
+                </div>
+                <div>
+                    <p>Gesamt</p>
+                    <p>${cartTotalCost}</p>
+        </div>`
+}
