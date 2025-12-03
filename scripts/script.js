@@ -32,7 +32,12 @@ function createCart() {
   for (let index = 0; index < cart.item.length; index++) {
     document.getElementById("cart").innerHTML += renderCart(index);
   }
-  createCartPrice();
+  if (cart.item.length > 0) {
+    createCartPrice();
+  } else {
+    document.getElementById("cart_payment_container").innerHTML = "";
+  }
+  
 }
 
 function countPieces(count, index) {
