@@ -38,6 +38,6 @@ function renderCartCost() {
                     <p>Gesamt</p>
                     <p>${cartTotalCost} €</p>
         </div>
-        <button class="cart_order_button" type="button">Bezahlen</button>
+        <button class="cart_order_button" onclick="openDialog()" type="button">Bezahlen</button>
         `
 }

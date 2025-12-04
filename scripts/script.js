@@ -99,6 +99,13 @@ function calculateTotalCostCart() {
     
 }
 
+const orderDialog = document.getElementById("order_executed");
+
+function openDialog() {
+    orderDialog.showModal();
+    
+}
+
 /* calculate in eine function packen oder stufenweise starten
 Kosten für die Lieferung in eine render function packen
 abholung und Lieferung button einfügen und mit in die Rechnung einfließen lassen */
