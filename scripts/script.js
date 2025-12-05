@@ -1,3 +1,5 @@
+let Timer;
+
 function createDishesList(menu) {
   document.getElementById("all_dishes").innerHTML = "";
   document.getElementById("actual_menu_image_change").src =
@@ -103,7 +105,16 @@ const orderDialog = document.getElementById("order_executed");
 
 function openDialog() {
     orderDialog.showModal();
+    Timer = setInterval(closeDialog, 1500);
     
+}
+
+function closeDialog() {
+    orderDialog.close();
+    cart.item = [];
+    document.getElementById("cart_payment_container").innerHTML = "";
+    document.getElementById("cart").innerHTML = "";
+    clearInterval(Timer);
 }
 
 /* calculate in eine function packen oder stufenweise starten

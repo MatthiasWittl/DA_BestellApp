@@ -167,3 +167,12 @@ footer {
     height: 100px;
     background-color: gray;
 }
+
+.order_dialog_container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border: 2px solid blue;
+    border-radius: 10px;
+    padding: 16px;
+}
