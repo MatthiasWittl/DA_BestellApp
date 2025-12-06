@@ -178,8 +178,6 @@ footer {
     width: 600px;
     height: 300px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
     text-align: center;
 }
 
@@ -188,6 +186,10 @@ footer {
     width: 150px;
     bottom: 10px;
     left: -150px;
-    transition: transform 5s linear;
+    transition: transform 6s linear;
     border-radius: 10px;
+}
+
+.order_dialog_container::backdrop {
+    backdrop-filter: blur(5px); 
 }

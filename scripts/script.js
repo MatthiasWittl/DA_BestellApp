@@ -1,4 +1,6 @@
+const orderDialog = document.getElementById("order_executed");
 let Timer;
+const deliveryRoller = document.getElementById("delivery_icon");
 
 function createDishesList(menu) {
   document.getElementById("all_dishes").innerHTML = "";
@@ -101,7 +103,7 @@ function calculateTotalCostCart() {
     
 }
 
-const orderDialog = document.getElementById("order_executed");
+
 
 function openDialog() {
     orderDialog.showModal();
@@ -117,12 +119,12 @@ function closeDialog() {
     document.getElementById("cart_payment_container").innerHTML = "";
     document.getElementById("cart").innerHTML = "";
     clearInterval(Timer);
+    deliveryRoller.style.transform = "translateX(0px)";
 }
 
 function imgtransition() {
-    const deliveryRoller = document.getElementById("delivery_icon");
     setTimeout(() => {
-    deliveryRoller.style.transform = "translate(1500px)";
+    deliveryRoller.style.transform = "translateX(1500px)";
 }, 80)
 }
 
