@@ -105,7 +105,9 @@ const orderDialog = document.getElementById("order_executed");
 
 function openDialog() {
     orderDialog.showModal();
-    Timer = setInterval(closeDialog, 1500);
+    Timer = setInterval(closeDialog, 3500);
+    imgtransition();
+    
     
 }
 
@@ -115,6 +117,13 @@ function closeDialog() {
     document.getElementById("cart_payment_container").innerHTML = "";
     document.getElementById("cart").innerHTML = "";
     clearInterval(Timer);
+}
+
+function imgtransition() {
+    const deliveryRoller = document.getElementById("delivery_icon");
+    setTimeout(() => {
+    deliveryRoller.style.transform = "translate(1500px)";
+}, 80)
 }
 
 /* calculate in eine function packen oder stufenweise starten
