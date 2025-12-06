@@ -73,7 +73,7 @@ function calculateCartCost(){
     for (let index = 0; index < cart.item.length; index++) {
         cartItemCost += cart.item[index].price
     }
-    console.log(cartItemCost);
+    cartItemCost.toLocaleString("de-DE", { style: "currency", currency: "EUR"});
     
 }
 
