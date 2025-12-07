@@ -26,6 +26,7 @@ function renderCart(index) {
 
 function renderCartCost() {
     return `
+        <p class="free_delivery_container" id="free_delivery"> Noch ${differenceToFreeDelivery.toLocaleString("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 1})} bis Lieferkosten frei </p>
        <div>
                     <p>Zwischensumme</p>
                     <p>${cartItemCost.toLocaleString("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 1})}</p>

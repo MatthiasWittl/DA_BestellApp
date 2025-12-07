@@ -2,6 +2,7 @@ const orderDialog = document.getElementById("order_executed");
 let Timer;
 const deliveryRoller = document.getElementById("delivery_icon");
 
+
 function createDishesList(menu) {
   document.getElementById("all_dishes").innerHTML = "";
   document.getElementById("actual_menu_image_change").src =
@@ -65,9 +66,12 @@ function calculateCartItemPrice(index) {
 
 function createCartPrice(){
     calculateCartCost();
-    calculateDeliveryCost();
     calculateTotalCostCart();
+    calculateDeliveryCost();
     document.getElementById("cart_payment_container").innerHTML = renderCartCost();
+    const freeDeliveryContainer = document.getElementById("free_delivery").classList;
+    changeVisibilityDeliveryFreeContainer(freeDeliveryContainer);
+    
 }
 
 function calculateCartCost(){
@@ -80,18 +84,24 @@ function calculateCartCost(){
 }
 
 function calculateDeliveryCost() {
-    if (cartItemCost > freeDelivery) {
-        deliveryFee = 0;  /* keine harten Zahlen */
+    
+    if (cartItemCost > freeDeliveryLimit) {
+        deliveryFee = freeDeliveryCost;          
     } else { 
-        let differenceToFreeDelivery = freeDelivery - cartItemCost;
-        console.log(differenceToFreeDelivery+"€ fehlen für Lieferkostenfrei");
-        deliveryFee = 8; /* keine harten Zahlen */
+        differenceToFreeDelivery = freeDeliveryLimit - cartItemCost;
+        deliveryFee = deliveryFeeCost; 
+    }
+}
+
+function changeVisibilityDeliveryFreeContainer (freeDeliveryContainer) {
+    if (deliveryFee == freeDeliveryCost) {
+        freeDeliveryContainer.add("hidden");   
     }
 }
 
 function calculateTotalCostCart() {
         cartTotalCost = 0;
-    if (cartItemCost < freeDelivery) {
+    if (cartItemCost < freeDeliveryLimit) {
         cartTotalCost = cartItemCost + deliveryFee
         console.log("Gesamt kosten " + cartTotalCost + "€");
     } else { 
