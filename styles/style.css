@@ -192,8 +192,16 @@ footer {
 }
 
 .free_delivery_container {
-    border: 2px solid blue;
+    border: 4px solid #6262d4;
     text-align: center;
     border-radius: 10px;
-    background-color: antiquewhite;
+    background-color: white;
+    margin-bottom: 16px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {border-color: #55c1ff;}
+    50% {border-color: #ff4081;}
+    100% {border-color: #55c1ff;}
 }
