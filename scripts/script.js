@@ -10,6 +10,10 @@ function createDishesList(menu) {
   for (let index = 0; index < Menu[menu].length; index++) {
     document.getElementById("all_dishes").innerHTML += renderDishes(index, menu);
   }
+  if (localStorage.getItem("cart")) {
+    readLocalStorage();
+    createCart();
+  }
 }
 
 function addToCart(index, menu) {
@@ -20,6 +24,7 @@ function addToCart(index, menu) {
   } else {
     createCartObject(index, menu);
     createCart();
+
   }
 }
 
@@ -42,7 +47,7 @@ function createCart() {
   } else {
     document.getElementById("cart_payment_container").innerHTML = "";
   }
-  
+  addToLocalStorage();
 }
 
 function countPieces(count, index) {
@@ -103,14 +108,9 @@ function calculateTotalCostCart() {
         cartTotalCost = 0;
     if (cartItemCost < freeDeliveryLimit) {
         cartTotalCost = cartItemCost + deliveryFee
-        console.log("Gesamt kosten " + cartTotalCost + "€");
     } else { 
-        cartTotalCost = cartItemCost
-        console.log("Gesamt kosten " + cartTotalCost + "€");
-        
-        
+        cartTotalCost = cartItemCost        
     }
-    
 }
 
 
@@ -136,6 +136,18 @@ function imgtransition() {
     setTimeout(() => {
     deliveryRoller.style.transform = "translateX(1500px)";
 }, 80)
+}
+
+function addToLocalStorage(){
+  if (cart.item.length > 0) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  } else {
+    localStorage.clear();
+  }
+}
+
+function readLocalStorage() {
+   cart = (JSON.parse(localStorage.getItem("cart")));
 }
 
 /* calculate in eine function packen oder stufenweise starten
