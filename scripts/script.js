@@ -130,6 +130,7 @@ function closeDialog() {
     document.getElementById("cart").innerHTML = "";
     clearInterval(Timer);
     deliveryRoller.style.transform = "translateX(0px)";
+    localStorage.clear();
 }
 
 function imgtransition() {
