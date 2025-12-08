@@ -203,8 +203,22 @@ footer {
     animation: pulse 2s infinite;
 }
 
+
 @keyframes pulse {
-    0% {border-color: #55c1ff;}
-    50% {border-color: #ff4081;}
-    100% {border-color: #55c1ff;}
-}
+    0% {
+      border-color: #ffb37a;  
+      box-shadow: 0 0 8px #ffb37a;
+    }
+    33% {
+      border-color: #ff8b47;  
+      box-shadow: 0 0 12px #ff8b47;
+    }
+    66% {
+      border-color: #ffd7b3;
+      box-shadow: 0 0 8px #ffd7b3;
+    }
+    100% {
+      border-color: #ffb37a;
+      box-shadow: 0 0 8px #ffb37a;
+    }
+  }
