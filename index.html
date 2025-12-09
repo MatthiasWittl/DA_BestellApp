@@ -29,9 +29,9 @@
                 <p>Bewertungen (4,5 von 5 Sternen)</p>
             </div>
             <section class="menu">
-                <button class="menu_button" onclick="createDishesList('appetizer')" type="button">Vorspeise</button>
-                <button class="menu_button" onclick="createDishesList('mainCourse')" type="button">Hauptgericht</button>
-                <button class="menu_button" onclick="createDishesList('dessert')" type="button">Nachspeise</button>
+                <button id="appetizer_menu_button" class="menu_button" onclick="createDishesList('appetizer')" type="button">Vorspeise</button>
+                <button id="mainCourse_menu_button" class="menu_button" onclick="createDishesList('mainCourse')" type="button">Hauptgericht</button>
+                <button id="dessert_menu_button" class="menu_button" onclick="createDishesList('dessert')" type="button">Nachspeise</button>
             </section>
             <img class="actual_menu_image" id="actual_menu_image_change" src="" alt="actual_menu_image">
             <section id="all_dishes" class="dishes_container">

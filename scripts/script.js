@@ -7,6 +7,7 @@ function createDishesList(menu) {
   document.getElementById("all_dishes").innerHTML = "";
   document.getElementById("actual_menu_image_change").src =
     "assets/Images/" + [menu] + ".jpg";
+    changeColorMenuButton(menu);
   for (let index = 0; index < Menu[menu].length; index++) {
     document.getElementById("all_dishes").innerHTML += renderDishes(index, menu);
   }
@@ -14,6 +15,13 @@ function createDishesList(menu) {
     readLocalStorage();
     createCart();
   }
+}
+
+function changeColorMenuButton(menu) {
+  document.querySelectorAll(".menu_button").forEach((button) => {
+    button.classList.remove("active_menu_button_color");
+  });
+  document.getElementById(menu + "_menu_button").classList.add("active_menu_button_color");
 }
 
 function addToCart(index, menu) {

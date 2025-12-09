@@ -57,18 +57,26 @@ header img {
 
 .menu {
     display: flex;
-    gap: 10px;
-    background-color: lightgray;
+    gap: 40px;
+    background-color: #f5f5f5;
     padding: 16px;
     margin-right: 24px;
+    justify-content: center;
 }
 
 .menu_button {
     border: none;
-    background-color: green;
+    background-color: #CD853F;
     padding: 12px;
     border-radius: 5px;
+    color: black;
 
+}
+
+.menu_button:hover {
+    background-color: #F36805;
+    color: white;
+    cursor: pointer;
 }
 
 .actual_menu_image {
@@ -81,7 +89,7 @@ header img {
 }
 
 .cart_container {
-    width: 300px;
+    min-width: 300px;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -105,6 +113,7 @@ header img {
     justify-content: space-between;
     padding-left: 8px;
     padding-right: 8px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
 }
 
 .cart_add_remove_pieces {

@@ -19,3 +19,8 @@ main {
 .hidden {
     visibility: hidden;
 }
+
+.active_menu_button_color {
+    background-color: #F36805 !important;
+    color: white !important;
+}
