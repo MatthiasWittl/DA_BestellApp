@@ -47,6 +47,7 @@ header img {
 .restaurant_info {
     margin-top: 8px;
     margin-bottom: 8px;
+    margin-right: 24px;
     padding-left: 16px;
 }
 
@@ -59,6 +60,7 @@ header img {
     gap: 10px;
     background-color: lightgray;
     padding: 16px;
+    margin-right: 24px;
 }
 
 .menu_button {
@@ -73,16 +75,20 @@ header img {
     width: auto;
     height: 150px;
     object-fit: cover;
-    margin-bottom: 8px;;
+    margin-bottom: 8px;
+    margin-right: 24px;
 
 }
 
 .cart_container {
-    width: 500px;
-    background-color: lightseagreen;
+    width: 300px;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 
+        -8px 0px 16px rgba(0, 0, 0, 0.20),
+        8px 0px 16px rgba(0, 0, 0, 0.20);
    
 }
 
@@ -99,7 +105,6 @@ header img {
     justify-content: space-between;
     padding-left: 8px;
     padding-right: 8px;
-    border: 2px solid black;
 }
 
 .cart_add_remove_pieces {
@@ -113,6 +118,12 @@ header img {
     border-radius: 5px;
     margin-top: 8px;
     padding: 5px;
+    background-color: #F36805;
+    border-color: #F36805;
+    color: #fff;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-size: 20px;
 }
 
 .cart_border_bottom {
@@ -125,7 +136,9 @@ header img {
     width: 40px;
     font-size: 25px;
     background-color: unset;
-    border: none;
+    border: 0.5px solid #e7e2da;
+    border-radius: 50%;
+    color: #F36805;
 }
 
 .cart_payment {
@@ -133,17 +146,25 @@ header img {
     flex-direction: column;
     position: sticky;
     bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .cart_payment div {
     display: flex;
     justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.cart_dishes h3 {
+    text-decoration: underline;   
 }
 
 .dish_menu {
     display: flex;
     justify-content: space-between;
     background-color: #fefefe;
+    margin-right: 24px;
     padding-left: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
