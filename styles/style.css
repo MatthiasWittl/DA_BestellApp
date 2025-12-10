@@ -66,10 +66,11 @@ header img {
 
 .menu_button {
     border: none;
-    background-color: #CD853F;
+    background-color: white;
     padding: 12px;
     border-radius: 5px;
     color: black;
+    font-size: 18px;
 
 }
 
@@ -81,7 +82,7 @@ header img {
 
 .actual_menu_image {
     width: auto;
-    height: 150px;
+    height: 200px;
     object-fit: cover;
     margin-bottom: 8px;
     margin-right: 24px;
@@ -100,10 +101,20 @@ header img {
    
 }
 
+.cart_container h2 {
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 .cart_items {
     display: flex;
     flex-direction: column;
     gap: 8px;
+   
+}
+
+.cart_items_container {
     position: sticky;
     top: 8px;
 }
@@ -148,6 +159,7 @@ header img {
     border: 0.5px solid #e7e2da;
     border-radius: 50%;
     color: #F36805;
+    margin-right: 8px;
 }
 
 .cart_payment {
@@ -191,6 +203,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 8px;
 }
 
 footer {
