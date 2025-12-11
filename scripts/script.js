@@ -1,6 +1,7 @@
 const orderDialog = document.getElementById("order_executed");
 let Timer;
 const deliveryRoller = document.getElementById("delivery_icon");
+const callToActionCart = document.getElementById("cart_call_to_action_id").classList;
 
 
 function createDishesList(menu) {
@@ -52,8 +53,10 @@ function createCart() {
   }
   if (cart.item.length > 0) {
     createCartPrice();
+    callToActionCart.add("hidden");
   } else {
     document.getElementById("cart_payment_container").innerHTML = "";
+    callToActionCart.remove("hidden");
   }
   addToLocalStorage();
 }
@@ -139,6 +142,7 @@ function closeDialog() {
     clearInterval(Timer);
     deliveryRoller.style.transform = "translateX(0px)";
     localStorage.clear();
+    callToActionCart.remove("hidden");
 }
 
 function imgtransition() {

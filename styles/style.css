@@ -107,6 +107,27 @@ header img {
     margin-bottom: 8px;
 }
 
+.cart_call_to_action {
+    text-align: center;
+    border: 4px dashed #6262d4;
+    animation: pulse 2s infinite;
+    position: absolute;
+    top: 50vh;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.cart_call_to_action img {
+    width: 50px;
+    height: auto;
+}
+
+.cart_call_to_action h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+
 .cart_items {
     display: flex;
     flex-direction: column;
