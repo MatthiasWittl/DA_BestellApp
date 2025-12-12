@@ -13,7 +13,7 @@ header img {
 
 
 .main_logo {
-    width: 100%;
+    width: calc(100vw - 300px);
     height: 300px;
     object-fit: cover;
 }
@@ -211,13 +211,13 @@ header img {
     padding-top: 8px;
     padding-bottom: 8px;
     border-radius: 10px;
-    border: 2px solid transparent;
+    border: 0.5px solid transparent;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .dish_menu:hover {
     background-color: #F5F5F5;
-    border: 2px solid black;
+    border: 0.5px solid black;
 }
 
 .dishes_container {
