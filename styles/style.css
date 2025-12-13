@@ -286,3 +286,33 @@ footer {
       box-shadow: 0 0 8px #ffb37a;
     }
   }
+
+  @media (max-width: 950px) {
+        header {
+            height: 60px;
+        }
+        header img {
+            height: 40px;
+        }
+        .cart_container {
+            min-width: 200px;
+        }
+        .menu_section {
+            width: calc(100% - 200px);
+        }
+        .company_logo {
+            width: 70px;
+        }
+        .main_logo {
+            height: 200px;
+        }
+        .actual_menu_image {
+            height: 150px;
+        }
+        .cart_call_to_action {
+            top: 40vh;
+        }
+
+
+  }
+    
