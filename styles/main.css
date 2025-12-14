@@ -24,3 +24,8 @@ main {
     background-color: #F36805 !important;
     color: white !important;
 }
+
+.low_resolution_cart_visible {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}

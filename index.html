@@ -37,8 +37,9 @@
             
             </section>
         </section>
-        <section class="cart_container" >
+        <section class="cart_container" id="cart_container_id" >
         <section class="cart_items_container" >
+            <button class="close_lower_resolution_cart" onclick="closeLowResolutionCart()">X</button>
             <h2>Warenkorb</h2>
             <div class="cart_call_to_action" id="cart_call_to_action_id" >
                 <img src="assets/Images/cart_Image.png" alt="cart Image">
@@ -57,22 +58,16 @@
        
         
     </main>
-    <button class="cart_for_lower_resolutions" onclick="openLowResolutionCartDialog()" ><img src="assets/Images/cart_Image.png" alt="Cart Icon">
+    <button class="cart_for_lower_resolutions" onclick="openLowResolutionCart()" ><img src="assets/Images/cart_Image.png" alt="Cart Icon">
         <p>Warenkorb ansehen</p>
         <p>10,45€</p></button>
     <footer>
         <h3>Impressum</h3>
     </footer>
 
-    <dialog id="order_executed" class="order_dialog_container" >
+    <dialog id="order_executed" class="order_dialog_container" aria-hidden="true">
         <h3>Bestellung ist unterwegs</h3>
         <img id="delivery_icon" src="assets/Images/Deliveryicon.jpg" alt="Delivery on the way">
-    </dialog>
-
-    <dialog id="low_resolution_cart_dialog" class="low_resolution_cart_dialog_container" >
-        <div class="cart_items" id="cart" >
-        </div>
-
     </dialog>
     <script src="data/db.js"></script>
     <script src="scripts/template.js"></script>

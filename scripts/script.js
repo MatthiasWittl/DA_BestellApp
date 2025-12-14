@@ -2,6 +2,7 @@ const orderDialog = document.getElementById("order_executed");
 let Timer;
 const deliveryRoller = document.getElementById("delivery_icon");
 const callToActionCart = document.getElementById("cart_call_to_action_id").classList;
+const element =  document.getElementById("cart_container_id").classList;
 
 
 function createDishesList(menu) {
@@ -143,6 +144,7 @@ function closeDialog() {
     deliveryRoller.style.transform = "translateX(0px)";
     localStorage.clear();
     callToActionCart.remove("hidden");
+    closeLowResolutionCart()
 }
 
 function imgtransition() {
@@ -163,11 +165,18 @@ function readLocalStorage() {
    cart = (JSON.parse(localStorage.getItem("cart")));
 }
 
-function openLowResolutionCartDialog() {
-    const lowResolutionCartDialog = document.getElementById("low_resolution_cart_dialog");
-    lowResolutionCartDialog.showModal();
-    createCart();
+function openLowResolutionCart() {
+    element.add("low_resolution_cart_visible");
+    document.body.style.overflow = "hidden";
+    
 }
+
+function closeLowResolutionCart() {
+    element.remove("low_resolution_cart_visible");
+    document.body.style.overflow = "";
+
+}
+
 
 /* calculate in eine function packen oder stufenweise starten
 Kosten für die Lieferung in eine render function packen
