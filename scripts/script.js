@@ -163,6 +163,12 @@ function readLocalStorage() {
    cart = (JSON.parse(localStorage.getItem("cart")));
 }
 
+function openLowResolutionCartDialog() {
+    const lowResolutionCartDialog = document.getElementById("low_resolution_cart_dialog");
+    lowResolutionCartDialog.showModal();
+    createCart();
+}
+
 /* calculate in eine function packen oder stufenweise starten
 Kosten für die Lieferung in eine render function packen
 abholung und Lieferung button einfügen und mit in die Rechnung einfließen lassen */

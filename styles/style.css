@@ -48,7 +48,7 @@ header img {
     margin-top: 8px;
     margin-bottom: 8px;
     margin-right: 24px;
-    padding-left: 16px;
+    margin-left: 16px;
 }
 
 .restaurant_info p {
@@ -207,6 +207,7 @@ header img {
     justify-content: space-between;
     background-color: #fefefe;
     margin-right: 24px;
+    margin-left: 16px;
     padding-left: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -267,6 +268,33 @@ footer {
     animation: pulse 2s infinite;
 }
 
+.cart_for_lower_resolutions {
+    display: none;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #F36805;
+    width: calc(100vw - 16px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.cart_for_lower_resolutions img {
+    width: 30px;
+    
+}
+.low_resolution_cart_dialog_container {
+    width: 100vw;
+    height: 100vh;
+}
+
 
 @keyframes pulse {
     0% {
@@ -293,12 +321,13 @@ footer {
         }
         header img {
             height: 40px;
+            margin-left: 8px;
         }
         .cart_container {
-            min-width: 200px;
+            display: none;
         }
         .menu_section {
-            width: calc(100% - 200px);
+            width: 100vw;
         }
         .company_logo {
             width: 70px;
@@ -308,11 +337,25 @@ footer {
         }
         .actual_menu_image {
             height: 150px;
+            margin-right: 0;
         }
         .cart_call_to_action {
             top: 40vh;
         }
-
-
+        .dish_menu {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+        .restaurant_info {
+            margin-left: 8px;
+        }
+        .cart_for_lower_resolutions {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 8px;
+            padding-right: 8px;
+            position: sticky;
+            bottom: 2px;
+            z-index: 1;
+        }
   }
-    
