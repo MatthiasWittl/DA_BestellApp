@@ -59,7 +59,9 @@ function createCart() {
     document.getElementById("cart_payment_container").innerHTML = "";
     callToActionCart.remove("hidden");
   }
+  updateLowResolutionCartTotalCost();
   addToLocalStorage();
+  
 }
 
 function countPieces(count, index) {
@@ -73,6 +75,7 @@ function countPieces(count, index) {
     createCart();
   } else {
     cart.item.splice(index, 1);
+    /*cartTotalCost = 0; */
     createCart();
   }
 }
@@ -89,6 +92,8 @@ function createCartPrice(){
     const freeDeliveryContainer = document.getElementById("free_delivery").classList;
     changeVisibilityDeliveryFreeContainer(freeDeliveryContainer);
     
+    
+    
 }
 
 function calculateCartCost(){
@@ -97,6 +102,7 @@ function calculateCartCost(){
         cartItemCost += cart.item[index].price
     }
     cartItemCost.toLocaleString("de-DE", { style: "currency", currency: "EUR"});
+    
     
 }
 
@@ -123,6 +129,7 @@ function calculateTotalCostCart() {
     } else { 
         cartTotalCost = cartItemCost        
     }
+    
 }
 
 
@@ -145,6 +152,8 @@ function closeDialog() {
     localStorage.clear();
     callToActionCart.remove("hidden");
     closeLowResolutionCart()
+    /* cartTotalCost = 0; */
+    updateLowResolutionCartTotalCost();
 }
 
 function imgtransition() {
@@ -177,7 +186,9 @@ function closeLowResolutionCart() {
 
 }
 
+function updateLowResolutionCartTotalCost() {
+    document.getElementById("cart_for_lower_resolutions_total_cost").innerText = cartTotalCost.toLocaleString("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 1});
+}
 
-/* calculate in eine function packen oder stufenweise starten
-Kosten für die Lieferung in eine render function packen
-abholung und Lieferung button einfügen und mit in die Rechnung einfließen lassen */
+
+/* bei aktualisieren der Seite wird itemcost und delivery cost nicht addiert*/
