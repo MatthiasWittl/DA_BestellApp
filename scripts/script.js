@@ -75,7 +75,6 @@ function countPieces(count, index) {
     createCart();
   } else {
     cart.item.splice(index, 1);
-    /*cartTotalCost = 0; */
     createCart();
   }
 }
@@ -86,8 +85,8 @@ function calculateCartItemPrice(index) {
 
 function createCartPrice(){
     calculateCartCost();
-    calculateTotalCostCart();
     calculateDeliveryCost();
+    calculateTotalCostCart();
     document.getElementById("cart_payment_container").innerHTML = renderCartCost();
     const freeDeliveryContainer = document.getElementById("free_delivery").classList;
     changeVisibilityDeliveryFreeContainer(freeDeliveryContainer);
@@ -100,10 +99,7 @@ function calculateCartCost(){
     cartItemCost = 0;
     for (let index = 0; index < cart.item.length; index++) {
         cartItemCost += cart.item[index].price
-    }
-    cartItemCost.toLocaleString("de-DE", { style: "currency", currency: "EUR"});
-    
-    
+    }    
 }
 
 function calculateDeliveryCost() {
@@ -123,7 +119,6 @@ function changeVisibilityDeliveryFreeContainer (freeDeliveryContainer) {
 }
 
 function calculateTotalCostCart() {
-        cartTotalCost = 0;
     if (cartItemCost < freeDeliveryLimit) {
         cartTotalCost = cartItemCost + deliveryFee
     } else { 
@@ -152,7 +147,6 @@ function closeDialog() {
     localStorage.clear();
     callToActionCart.remove("hidden");
     closeLowResolutionCart()
-    /* cartTotalCost = 0; */
     updateLowResolutionCartTotalCost();
 }
 
@@ -187,6 +181,10 @@ function closeLowResolutionCart() {
 }
 
 function updateLowResolutionCartTotalCost() {
+  if (cart.item.length == 0) {
+    cartTotalCost = emptyCartTotalCost;
+    
+  } 
     document.getElementById("cart_for_lower_resolutions_total_cost").innerText = cartTotalCost.toLocaleString("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 1});
 }
 

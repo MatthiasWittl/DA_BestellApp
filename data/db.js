@@ -116,3 +116,5 @@ let cartTotalCost = 0;
 let freeDeliveryLimit = 30; /* Ab 30€ keine Lieferkosten */
 
 let differenceToFreeDelivery = 0;
+
+let emptyCartTotalCost = 0;
