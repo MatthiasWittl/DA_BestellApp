@@ -232,6 +232,15 @@ header img {
 footer {
     height: 100px;
     background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
 }
 
 .order_dialog_container {
