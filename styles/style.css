@@ -3,6 +3,10 @@ header {
     height: 80px;
 }
 
+h1 {
+    font-family: 'Main_Headline_Font', sans-serif;
+}
+
 header img {
     margin-top: 8px;
     width: auto;

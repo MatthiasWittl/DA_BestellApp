@@ -45,3 +45,8 @@ main {
     font-family: 'Menu_Buttons';
     src: url('../assets/fonts/radley-v24-latin-regular.woff2') format('woff2'),;
 }
+
+@font-face {
+    font-family: 'Main_Headline_Font';
+    src: url('../assets/fonts/cabin-sketch-v23-latin-regular.woff2') format('woff2'),;
+}
