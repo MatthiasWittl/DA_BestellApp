@@ -34,7 +34,7 @@ main {
 }
 
 .low_resolution_cart_visible {
-    opacity: 1 !important;
+    display: flex !important;
     pointer-events: auto !important;
 }
 

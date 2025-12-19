@@ -372,7 +372,7 @@ footer img {
             margin-left: 8px;
         }
         .cart_container {
-            opacity: 0;
+            display: none;
             pointer-events: none;
             position: fixed;
             inset: 0;
@@ -382,8 +382,6 @@ footer img {
             padding-right: 8px;
             box-shadow: none;
             margin-right: 0;
-            transition: 0.2s ease-in;;
-
         }
         .cart_items_container {
             max-height: calc(100vh - 169px);

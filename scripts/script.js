@@ -2,7 +2,7 @@ const orderDialog = document.getElementById("order_executed");
 let Timer;
 const deliveryRoller = document.getElementById("delivery_icon");
 const callToActionCart = document.getElementById("cart_call_to_action_id").classList;
-const element =  document.getElementById("cart_container_id").classList;
+const lowResolutionCartVisibility =  document.getElementById("cart_container_id").classList;
 const cartItemsContainer = document.getElementById("cart_items_container_id").classList;
 
 
@@ -174,13 +174,13 @@ function readLocalStorage() {
 }
 
 function openLowResolutionCart() {
-    element.add("low_resolution_cart_visible");
+    lowResolutionCartVisibility.add("low_resolution_cart_visible");
     document.body.style.overflow = "hidden";
     
 }
 
 function closeLowResolutionCart() {
-    element.remove("low_resolution_cart_visible");
+    lowResolutionCartVisibility.remove("low_resolution_cart_visible");
     document.body.style.overflow = "";
 
 }
