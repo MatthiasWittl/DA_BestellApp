@@ -56,7 +56,7 @@ header img {
 }
 
 .restaurant_info p {
-    color: orangered;
+    color: #C2410C;
 }
 
 .menu {
@@ -172,12 +172,13 @@ header img {
     border-radius: 5px;
     margin-top: 8px;
     padding: 5px;
-    background-color: #F36805;
-    border-color: #F36805;
+    background-color: #C2410C;
     color: #fff;
     border-radius: 20px;
     border: 1px solid transparent;
     font-size: 20px;
+    box-shadow: 0px 2px 1px 1px #F36805;
+
 }
 
 .cart_border_bottom {
@@ -186,8 +187,8 @@ header img {
 }
 
 .add_to_cart {
-    height: 35px;
-    min-width: 40px;
+    height: 48px;
+    min-width: 48px;
     font-size: 25px;
     background-color: unset;
     border: 0.5px solid #e7e2da;
@@ -307,7 +308,7 @@ footer img {
     align-items: center;
     padding-left: 8px;
     padding-right: 8px;
-    background-color: #F36805;
+    background-color: #C2410C;
     width: calc(100vw - 32px);
     margin-left: auto;
     margin-right: auto;
