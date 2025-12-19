@@ -20,6 +20,14 @@ main {
     visibility: hidden;
 }
 
+.display_none {
+    display: none;
+}
+
+.overflow_auto {
+    overflow: auto;
+}
+
 .active_menu_button_color {
     background-color: #F36805 !important;
     color: white !important;

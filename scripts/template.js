@@ -19,7 +19,7 @@ function renderCart(index) {
         <span>${cart.item[index].piece}</span>
         <button class="cart_add_remove_pieces" onclick="countPieces('up', ${[index,]})" >&#43</button>
         </div>
-        <span>${cart.item[index].price.toLocaleString("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 1})}</span>
+        <span class="cart_dish_price" >${cart.item[index].price.toLocaleString("de-DE", { style: "currency", currency: "EUR", maximumFractionDigits: 1})}</span>
     </div>
         `;
 }

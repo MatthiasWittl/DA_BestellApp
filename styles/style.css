@@ -111,11 +111,12 @@ header img {
     text-align: center;
     margin-top: 8px;
     margin-bottom: 8px;
+    font-family: 'Headline_Font', sans-serif;
 }
 
 .cart_call_to_action {
     text-align: center;
-    border: 4px dashed #6262d4;
+    border: 4px inset #6262d4;
     animation: pulse 2s infinite;
     position: absolute;
     top: calc(50vh - 80px);
@@ -144,6 +145,7 @@ header img {
 .cart_items_container {
     position: sticky;
     top: 8px;
+    /* overflow: auto; */
 }
 
 .cart_dishes {
@@ -159,6 +161,11 @@ header img {
         width: 20px;
         height: auto;
         background-color: transparent;
+        font-size: 18px;
+}
+
+.cart_dish_price {
+    font-size: 18px;
 }
 
 .cart_order_button {
@@ -195,6 +202,7 @@ header img {
     position: sticky;
     bottom: 8px;
     margin-bottom: 8px;
+    font-family: 'Body_Font', sans-serif;
 }
 
 .cart_payment div {
@@ -205,7 +213,9 @@ header img {
 }
 
 .cart_dishes h3 {
-    text-decoration: underline;   
+    text-decoration: underline;  
+    font-family: 'Headline_Font', sans-serif; 
+    font-size: 20px;
 }
 
 .dish_menu {
@@ -371,7 +381,11 @@ footer img {
             padding-right: 8px;
             box-shadow: none;
             margin-right: 0;
+            transition: 0.2s ease-in;;
 
+        }
+        .cart_items_container {
+            max-height: calc(100vh - 169px);
         }
         .menu_section {
             width: 100vw;
@@ -404,6 +418,9 @@ footer img {
             position: sticky;
             bottom: 2px;
             z-index: 1;
+        }
+        .cart_for_lower_resolutions p {
+            font-family: 'Headline_Font', sans-serif;
         }
         .close_lower_resolution_cart {
             display: block;
