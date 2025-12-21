@@ -9,7 +9,7 @@ window.addEventListener('resize' , hideCartByLowResolutionIfEmpty);
 
 
 function createDishesList(menu) {
-  /*let scrollPos = window.scrollY; */
+  let scrollPos = window.scrollY; 
   document.getElementById("all_dishes").innerHTML = "";
   document.getElementById("actual_menu_image_change").src =
     "assets/Images/" + [menu] + ".jpg";
@@ -22,7 +22,7 @@ function createDishesList(menu) {
     readLocalStorage();
     createCart();
   }
-  /* window.scrollTo(0, scrollPos); */
+window.scrollTo(0, scrollPos);
 }
 
 function changeColorMenuButton(menu) {
@@ -106,7 +106,7 @@ function createCartPrice(){
 }
 
 function calculateCartCost(){
-    cartItemCost = 0;
+    cartItemCost = cartItemCost - cartItemCost; /* reset cartItemCost to 0 before calculation */
     for (let index = 0; index < cart.item.length; index++) {
         cartItemCost += cart.item[index].price
     }    

@@ -118,3 +118,21 @@ let freeDeliveryLimit = 30; /* Ab 30€ keine Lieferkosten */
 let differenceToFreeDelivery = 0;
 
 let emptyCartTotalCost = 0;
+
+let cartCostAndCalculation = {
+  deliveryParameter: [
+    { deliveryFee: 0 },
+    { deliveryFeeCost: 8 },
+    { freeDeliveryCost: 0 },
+    { freeDeliveryLimit: 30 },
+    { differenceToFreeDelivery: 0 },
+  ],
+  cartCost: [
+    { cartItemCost: 0 },
+    { cartTotalCost: 0 },
+    { emptyCartTotalCost: 0 },
+    { resetCartItemCost: 0 },
+  ],
+
+
+}

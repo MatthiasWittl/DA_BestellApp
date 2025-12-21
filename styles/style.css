@@ -85,11 +85,7 @@ header img {
 
 }
 
-.menu_button:hover {
-    background-color: #F36805;
-    color: white;
-    cursor: pointer;
-}
+
 
 .actual_menu_image {
     width: auto;
@@ -258,10 +254,7 @@ header img {
     font-family: 'Body_Font', sans-serif;
 }
 
-.dish_menu:hover {
-    background-color: #F5F5F5;
-    border: 0.5px solid black;
-}
+
 
 .dishes_container {
     display: flex;
@@ -338,9 +331,7 @@ footer img {
     font-size: 18px;
 }
 
-.cart_for_lower_resolutions:hover {
-    cursor: pointer;
-}
+
 
 .cart_for_lower_resolutions img {
     width: 30px;
@@ -513,4 +504,22 @@ footer img {
         .company_logo {
             top: 62%;
         }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    main button:hover {
+        cursor: pointer;
+    }
+    .menu_button:hover {
+        background-color: #F36805;
+        color: white;
+        cursor: pointer;
+    }
+    .dish_menu:hover {
+        background-color: #F5F5F5;
+        border: 0.5px solid black;
+    }
+    .cart_for_lower_resolutions:hover {
+        cursor: pointer;
+    }
 }
