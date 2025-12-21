@@ -423,7 +423,6 @@ footer img {
             margin-left: 8px;
         }
         .cart_for_lower_resolutions {
-            display: flex;
             justify-content: space-between;
             position: sticky;
             bottom: 2px;

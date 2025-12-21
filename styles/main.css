@@ -28,33 +28,17 @@ main {
     overflow: auto;
 }
 
+.display_flex {
+    display: flex;
+}
+
 .active_menu_button_color {
-    background-color: #C2410C !important;
-    color: white !important;
+    background-color: #C2410C;
+    color: white;
 }
 
 .low_resolution_cart_visible {
-    display: flex !important;
-    pointer-events: auto !important;
+    display: flex;
+    pointer-events: auto;
 }
 
-@font-face {
-    font-family: 'Headline_Font';
-    src: url('../assets/fonts/lobster-v32-latin-regular.woff2') format('woff2'),
-         
-}
-
-@font-face {
-    font-family: 'Body_Font';
-    src: url('../assets/fonts/roboto-v50-latin-regular.woff2') format('woff2'),;
-}
-
-@font-face {
-    font-family: 'Menu_Buttons';
-    src: url('../assets/fonts/radley-v24-latin-regular.woff2') format('woff2'),;
-}
-
-@font-face {
-    font-family: 'Main_Headline_Font';
-    src: url('../assets/fonts/cabin-sketch-v23-latin-regular.woff2') format('woff2'),;
-}

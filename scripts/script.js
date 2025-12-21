@@ -4,6 +4,7 @@ const deliveryRoller = document.getElementById("delivery_icon");
 const callToActionCart = document.getElementById("cart_call_to_action_id").classList;
 const lowResolutionCartVisibility =  document.getElementById("cart_container_id").classList;
 const cartItemsContainer = document.getElementById("cart_items_container_id").classList;
+const buttonLowerResolutionCart = document.getElementById("cart_for_lower_resolutions_id").classList;
 
 
 function createDishesList(menu) {
@@ -11,6 +12,7 @@ function createDishesList(menu) {
   document.getElementById("actual_menu_image_change").src =
     "assets/Images/" + [menu] + ".jpg";
     changeColorMenuButton(menu);
+    hideCartByLowResolutionIfEmpty();
   for (let index = 0; index < Menu[menu].length; index++) {
     document.getElementById("all_dishes").innerHTML += renderDishes(index, menu);
   }
@@ -57,10 +59,12 @@ function createCart() {
     createCartPrice();
     callToActionCart.add("display_none");
     cartItemsContainer.add("overflow_auto");
+    hideCartByLowResolutionIfEmpty();
   } else {
     document.getElementById("cart_payment_container").innerHTML = "";
     callToActionCart.remove("display_none");
     cartItemsContainer.remove("overflow_auto");
+    hideCartByLowResolutionIfEmpty();
   }
   updateLowResolutionCartTotalCost();
   addToLocalStorage();
@@ -153,6 +157,7 @@ function closeDialog() {
     closeLowResolutionCart()
     updateLowResolutionCartTotalCost();
     scrollToTopAfterOrder()
+    hideCartByLowResolutionIfEmpty();
 }
 
 function imgtransition() {
@@ -195,6 +200,15 @@ function updateLowResolutionCartTotalCost() {
 
 function scrollToTopAfterOrder() {
     window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function hideCartByLowResolutionIfEmpty() {
+  let displayWidth = window.innerWidth;
+    if (displayWidth < 950 && cart.item.length > 0) {
+    buttonLowerResolutionCart.add("display_flex");
+    } else {
+    buttonLowerResolutionCart.remove("display_flex");
+    }
 }
 
 
