@@ -20,7 +20,15 @@ header img {
     padding-left: 16px;
 }
 
-
+main {
+    display: flex;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 100%;
+    flex: 1;
+}
 
 .main_logo {
     width: 100%;
@@ -33,9 +41,9 @@ header img {
     flex-direction: column;
 }
 
-.company_logo_div > * {
+.company_logo_div>* {
     grid-area: 1 / 1;
-  }
+}
 
 .company_logo {
     top: 84%;
@@ -103,10 +111,10 @@ header img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 
+    box-shadow:
         -8px 0px 16px rgba(0, 0, 0, 0.20),
         8px 0px 16px rgba(0, 0, 0, 0.20);
-   
+
 }
 
 .cart_container h2 {
@@ -143,7 +151,7 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 8px;
-   
+
 }
 
 .cart_items_container {
@@ -161,13 +169,13 @@ header img {
 }
 
 .cart_add_remove_pieces {
-        border: none;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background-color: #f2f2f2;
-        font-size: 18px;
-        color: #F36805;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    font-size: 18px;
+    color: #F36805;
 }
 
 .cart_pieces {
@@ -226,8 +234,8 @@ header img {
 }
 
 .cart_dishes h3 {
-    text-decoration: underline;  
-    font-family: 'Headline_Font', sans-serif; 
+    text-decoration: underline;
+    font-family: 'Headline_Font', sans-serif;
     font-size: 20px;
     margin-bottom: 8px;
 }
@@ -301,7 +309,7 @@ footer img {
 }
 
 .order_dialog_container::backdrop {
-    backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);
 }
 
 .free_delivery_container {
@@ -335,7 +343,7 @@ footer img {
 
 .cart_for_lower_resolutions img {
     width: 30px;
-    
+
 }
 
 .close_lower_resolution_cart {
@@ -354,171 +362,204 @@ footer img {
 
 @keyframes pulse {
     0% {
-      border-color: #ffb37a;  
-      box-shadow: 0 0 8px #ffb37a;
+        border-color: #ffb37a;
+        box-shadow: 0 0 8px #ffb37a;
     }
-    33% {
-      border-color: #ff8b47;  
-      box-shadow: 0 0 12px #ff8b47;
-    }
-    66% {
-      border-color: #ffd7b3;
-      box-shadow: 0 0 8px #ffd7b3;
-    }
-    100% {
-      border-color: #ffb37a;
-      box-shadow: 0 0 8px #ffb37a;
-    }
-  }
 
-  @media (max-width: 950px) {
-        header {
-            height: 60px;
-        }
-        footer {
-            height: 60px;
-        }
-        footer img {
-            height: 40px;
-            width: 40px;
-        }
-        header img {
-            height: 40px;
-            margin-left: 8px;
-        }
-        .cart_container {
-            display: none;
-            pointer-events: none;
-            position: fixed;
-            inset: 0;
-            z-index: 2;
-            background-color: white;
-            padding-left: 8px;
-            padding-right: 8px;
-            box-shadow: none;
-            margin-right: 0;
-        }
-        .cart_items_container {
-            max-height: calc(100vh - 169px);
-        }
-        .menu_section {
-            width: 100vw;
-        }
-        .company_logo {
-            width: 70px;
-        }
-        .main_logo {
-            height: 200px;
-        }
-        .actual_menu_image {
-            height: 150px;
-            margin-right: 0;
-        }
-        .cart_call_to_action {
-            top: calc(50vh - 74px);
-            left: calc(50vw - 158px);
-            width: 300px;
-            margin-left: 0;
-            margin-right: 0;
-        }
-        .dish_menu {
-            margin-left: 8px;
-            margin-right: 8px;
-        }
-        .restaurant_info {
-            margin-left: 8px;
-        }
-        .cart_for_lower_resolutions {
-            justify-content: space-between;
-            position: sticky;
-            bottom: 2px;
-            z-index: 1;
-        }
-        .cart_for_lower_resolutions p {
-            font-family: 'Headline_Font', sans-serif;
-        }
-        .close_lower_resolution_cart {
-            display: block;
-        }
-        .menu {
-            margin-right: 0;
-        }
-        
-       
-  }
+    33% {
+        border-color: #ff8b47;
+        box-shadow: 0 0 12px #ff8b47;
+    }
+
+    66% {
+        border-color: #ffd7b3;
+        box-shadow: 0 0 8px #ffd7b3;
+    }
+
+    100% {
+        border-color: #ffb37a;
+        box-shadow: 0 0 8px #ffb37a;
+    }
+}
+
+@media (max-width: 950px) {
+    header {
+        height: 60px;
+    }
+
+    footer {
+        height: 60px;
+    }
+
+    footer img {
+        height: 40px;
+        width: 40px;
+    }
+
+    header img {
+        height: 40px;
+        margin-left: 8px;
+    }
+
+    .cart_container {
+        display: none;
+        pointer-events: none;
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        background-color: white;
+        padding-left: 8px;
+        padding-right: 8px;
+        box-shadow: none;
+        margin-right: 0;
+    }
+
+    .cart_items_container {
+        max-height: calc(100vh - 169px);
+    }
+
+    .menu_section {
+        width: 100vw;
+    }
+
+    .company_logo {
+        width: 70px;
+    }
+
+    .main_logo {
+        height: 200px;
+    }
+
+    .actual_menu_image {
+        height: 150px;
+        margin-right: 0;
+    }
+
+    .cart_call_to_action {
+        top: calc(50vh - 74px);
+        left: calc(50vw - 158px);
+        width: 300px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .dish_menu {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .restaurant_info {
+        margin-left: 8px;
+    }
+
+    .cart_for_lower_resolutions {
+        justify-content: space-between;
+        position: sticky;
+        bottom: 2px;
+        z-index: 1;
+    }
+
+    .cart_for_lower_resolutions p {
+        font-family: 'Headline_Font', sans-serif;
+    }
+
+    .close_lower_resolution_cart {
+        display: block;
+    }
+
+    .menu {
+        margin-right: 0;
+    }
+
+
+}
 
 @media (max-width: 500px) {
-        h1 {
-            font-size: 24px;
-        }
-        .menu_button {
-            padding: 8px;  
-        }
-        .menu {
-            gap: 20px;
-            padding: 8px;
-        }
-        .dish_menu h2 {
-            font-size: 20px;
-        }
-        .dish_menu {
-            padding-left: 4px;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            margin-left: 4px;
-            margin-right: 4px;
-        }
-        .add_to_cart {
-            margin-right: 4px;
-        }
-        .cart_for_lower_resolutions {
-            width: calc(100vw - 24px);
-        }
+    h1 {
+        font-size: 24px;
+    }
+
+    .menu_button {
+        padding: 8px;
+    }
+
+    .menu {
+        gap: 20px;
+        padding: 8px;
+    }
+
+    .dish_menu h2 {
+        font-size: 20px;
+    }
+
+    .dish_menu {
+        padding-left: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+    .add_to_cart {
+        margin-right: 4px;
+    }
+
+    .cart_for_lower_resolutions {
+        width: calc(100vw - 24px);
+    }
 
 }
 
 @media (max-width: 400px) {
-        .main_logo {
-            height: 150px;
-        }
-       .company_logo {
-            width: 60px;
-        }
-        .menu {
-            gap: 8px;
-        }
-        .actual_menu_image {
-            height: 100px;
-        }
-        .cart_for_lower_resolutions img {
-            width: 20px;
-        }
+    .main_logo {
+        height: 150px;
+    }
+
+    .company_logo {
+        width: 60px;
+    }
+
+    .menu {
+        gap: 8px;
+    }
+
+    .actual_menu_image {
+        height: 100px;
+    }
+
+    .cart_for_lower_resolutions img {
+        width: 20px;
+    }
 
 }
 
 @media (max-width: 370px) {
-        .menu_button {
-            padding: 4px;
-            font-size: 16px;
-        }
-        .company_logo {
-            top: 62%;
-        }
+    .menu_button {
+        padding: 4px;
+        font-size: 16px;
+    }
+
+    .company_logo {
+        top: 62%;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
     main button:hover {
         cursor: pointer;
     }
+
     .menu_button:hover {
         background-color: #F36805;
         color: white;
         cursor: pointer;
     }
+
     .dish_menu:hover {
         background-color: #F5F5F5;
         border: 0.5px solid black;
     }
+
     .cart_for_lower_resolutions:hover {
         cursor: pointer;
     }

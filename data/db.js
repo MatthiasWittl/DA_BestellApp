@@ -102,7 +102,6 @@ let cart = {
   item: [],
 };
 
-
 let cartItemCost = 0;
 
 let deliveryFee = 0; /* Kosten nach Berechnung der Lieferkosten (Warenkorb höher als 30€ - 0€ bei weniger 8€) */
@@ -133,6 +132,4 @@ let cartCostAndCalculation = {
     { emptyCartTotalCost: 0 },
     { resetCartItemCost: 0 },
   ],
-
-
-}
+};
