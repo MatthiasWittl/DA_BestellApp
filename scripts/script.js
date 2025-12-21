@@ -5,6 +5,7 @@ const callToActionCart = document.getElementById("cart_call_to_action_id").class
 const lowResolutionCartVisibility =  document.getElementById("cart_container_id").classList;
 const cartItemsContainer = document.getElementById("cart_items_container_id").classList;
 const buttonLowerResolutionCart = document.getElementById("cart_for_lower_resolutions_id").classList;
+window.addEventListener('resize' , hideCartByLowResolutionIfEmpty);
 
 
 function createDishesList(menu) {

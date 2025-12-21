@@ -160,10 +160,18 @@ header img {
 
 .cart_add_remove_pieces {
         border: none;
-        width: 20px;
-        height: auto;
-        background-color: transparent;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: #f2f2f2;
         font-size: 18px;
+        color: #F36805;
+}
+
+.cart_pieces {
+    font-size: 18px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .cart_dish_price {
@@ -219,6 +227,7 @@ header img {
     text-decoration: underline;  
     font-family: 'Headline_Font', sans-serif; 
     font-size: 20px;
+    margin-bottom: 8px;
 }
 
 .dish_menu {
