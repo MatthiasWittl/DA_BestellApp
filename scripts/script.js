@@ -9,6 +9,7 @@ window.addEventListener('resize' , hideCartByLowResolutionIfEmpty);
 
 
 function createDishesList(menu) {
+  /*let scrollPos = window.scrollY; */
   document.getElementById("all_dishes").innerHTML = "";
   document.getElementById("actual_menu_image_change").src =
     "assets/Images/" + [menu] + ".jpg";
@@ -21,6 +22,7 @@ function createDishesList(menu) {
     readLocalStorage();
     createCart();
   }
+  /* window.scrollTo(0, scrollPos); */
 }
 
 function changeColorMenuButton(menu) {
