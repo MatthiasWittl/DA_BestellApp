@@ -551,6 +551,20 @@ footer img {
     }
 }
 
+@media (min-width: 1448px) {
+    header img {
+        margin-left: 0;
+    }
+    .restaurant_info {
+        margin-left: 0;
+    }
+    .dish_menu {
+        margin-left: 0;
+    }
+
+
+}
+
 @media (hover: hover) and (pointer: fine) {
     main button:hover {
         cursor: pointer;
