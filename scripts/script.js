@@ -121,7 +121,7 @@ function calculateCartCost() {
 }
 
 function calculateDeliveryCost() {
-  if (cartItemCost > freeDeliveryLimit) {
+  if (cartItemCost >= freeDeliveryLimit) {
     deliveryFee = freeDeliveryCost;
   } else {
     differenceToFreeDelivery = freeDeliveryLimit - cartItemCost;
