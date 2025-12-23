@@ -158,6 +158,7 @@ main {
 .cart_items_container {
     position: sticky;
     top: 8px;
+    max-height: calc(100vh - 249px);
 }
 
 .cart_dishes {
@@ -576,5 +577,14 @@ footer img {
 
     .cart_for_lower_resolutions:hover {
         cursor: pointer;
+    }
+}
+
+@media (min-height: 1200px) {
+    .cart_items_container {
+        max-height: calc(100vh - 369px);
+    }
+    .cart_container {
+        max-height: 1216px;
     }
 }
