@@ -1,9 +1,20 @@
+/* Cart Cost Variables start */
+let cartItemCost = 0;
+let deliveryFee = 0; /* Kosten nach Berechnung der Lieferkosten (Warenkorb höher als 30€ - 0€ bei weniger 8€) */
+let deliveryFeeCost = 8; /* Lieferkosten */
+let freeDeliveryCost = 0;
+let cartTotalCost = 0;
+let freeDeliveryLimit = 30; /* Ab 30€ keine Lieferkosten */
+let differenceToFreeDelivery = 0;
+let emptyCartTotalCost = 0;
+
+/* Cart Cost Variables end */
+
 let Menu = {
   appetizer: [
     {
       name: "Bruschetta",
-      description:
-        "geröstetes Brot mit Tomaten, Basilikum, Knoblauch und Olivenöl",
+      description: "geröstetes Brot mit Tomaten, Basilikum, Knoblauch und Olivenöl",
       price: 5.5,
     },
     {
@@ -23,8 +34,7 @@ let Menu = {
     },
     {
       name: "Bavarese alla Spuma",
-      description:
-        "frisches Weißbier mit einer leichten Schaumkrone und zarten Weißwürstchen",
+      description: "frisches Weißbier mit einer leichten Schaumkrone und zarten Weißwürstchen",
       price: 7.0,
     },
   ],
@@ -41,20 +51,17 @@ let Menu = {
     },
     {
       name: "Quattro Stagioni",
-      description:
-        "Tomatensauce, Mozzarella, Schinken, Pilze, Artischocken, Oliven",
+      description: "Tomatensauce, Mozzarella, Schinken, Pilze, Artischocken, Oliven",
       price: 10.0,
     },
     {
       name: "Vegetariana",
-      description:
-        "Tomatensauce, Mozzarella, Paprika, Zucchini, Auberginen, Pilze",
+      description: "Tomatensauce, Mozzarella, Paprika, Zucchini, Auberginen, Pilze",
       price: 9.0,
     },
     {
       name: "Bavaria",
-      description:
-        "Tomatensauce, Schafskäse, hauchzarte Leberkäsescheiben, Bärlauchcreme",
+      description: "Tomatensauce, Schafskäse, hauchzarte Leberkäsescheiben, Bärlauchcreme",
       price: 10.5,
     },
     {
@@ -66,8 +73,7 @@ let Menu = {
   dessert: [
     {
       name: "Tiramisu",
-      description:
-        "klassisches italienisches Dessert mit Mascarpone, Espresso und Kakao",
+      description: "klassisches italienisches Dessert mit Mascarpone, Espresso und Kakao",
       price: 4.5,
     },
     {
@@ -100,36 +106,4 @@ let Menu = {
 
 let cart = {
   item: [],
-};
-
-let cartItemCost = 0;
-
-let deliveryFee = 0; /* Kosten nach Berechnung der Lieferkosten (Warenkorb höher als 30€ - 0€ bei weniger 8€) */
-
-let deliveryFeeCost = 8; /* Lieferkosten */
-
-let freeDeliveryCost = 0;
-
-let cartTotalCost = 0;
-
-let freeDeliveryLimit = 30; /* Ab 30€ keine Lieferkosten */
-
-let differenceToFreeDelivery = 0;
-
-let emptyCartTotalCost = 0;
-
-let cartCostAndCalculation = {
-  deliveryParameter: [
-    { deliveryFee: 0 },
-    { deliveryFeeCost: 8 },
-    { freeDeliveryCost: 0 },
-    { freeDeliveryLimit: 30 },
-    { differenceToFreeDelivery: 0 },
-  ],
-  cartCost: [
-    { cartItemCost: 0 },
-    { cartTotalCost: 0 },
-    { emptyCartTotalCost: 0 },
-    { resetCartItemCost: 0 },
-  ],
 };
