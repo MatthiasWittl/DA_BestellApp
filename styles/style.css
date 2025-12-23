@@ -588,3 +588,12 @@ footer img {
         max-height: 1216px;
     }
 }
+
+@media (min-height: 1200px) and (max-width: 950px) {
+    .cart_container {
+        max-height: 100vh;
+    }
+    .cart_items_container {
+        max-height: calc(100vh - 169px);
+    }
+}
