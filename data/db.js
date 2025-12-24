@@ -1,10 +1,10 @@
 /* Cart Cost Variables start */
 let cartItemCost = 0;
-let deliveryFee = 0; /* Kosten nach Berechnung der Lieferkosten (Warenkorb höher als 30€ - 0€ bei weniger 8€) */
-let deliveryFeeCost = 8; /* Lieferkosten */
+let deliveryFee = 0; 
+let deliveryFeeCost = 8; 
 let freeDeliveryCost = 0;
 let cartTotalCost = 0;
-let freeDeliveryLimit = 30; /* Ab 30€ keine Lieferkosten */
+let freeDeliveryLimit = 30; 
 let differenceToFreeDelivery = 0;
 let emptyCartTotalCost = 0;
 

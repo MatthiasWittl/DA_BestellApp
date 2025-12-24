@@ -46,7 +46,7 @@ function addToCart(index, menu) {
 function createCartObject(index, menu) {
   cart.item.push({
     name: Menu[menu][index].name,
-    piece: 1 /* Bei erstmaligen hinzufügen eines Artikels wird die Stückzahl auf 1 gesetzt */,
+    piece: 1 /* For First Time in Cart */,
     menuPrice: Menu[menu][index].price,
     price: Menu[menu][index].price,
   });
